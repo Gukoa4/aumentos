@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="test.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Precios</title>
+</head>
+
+<body>
+    <div class="selectores">
+        <div>
+            <label for="localidad">Seleccione la localidad:&nbsp;</label>
+            <select id="localidad" autocomplete="off">
+                <option value="listaSalvador" selected>San Salvador</option>
+                <option value="listaPalpala">Palpala</option>
+            </select>
+        </div>
+        <div>
+            <label for="lista">Seleccione la lista de precios:&nbsp;</label>
+            <select id="lista" autocomplete="off">
+                <option value="listaJun2023" selected>Junio 2023</option>
+            </select>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container-precios">
+            <div class="por3">
+                <header>
+                    <h2>Actual</h2>
+                </header>
+                <!-- <div class="wrapper">
+    <span>Producto</span> <span>Precio</span> <span>Aumento</span> <span>Precio con aumento</span> <span>descuento</span> <span>precio actual con descuento</span><span>precio nuevo con descuento</span>
+</div>
+<div class="wrapper">
+    <p>Tv</p> 
+    <div>
+        <label for="fname">$</label>
+            <input type="text" id="fname" name="fname">
+    </div>
+     <div>
+         <input type="text" id="fname" name="fname">
+         <label for="fname">%</label>
+    </div>
+     <p>$1700</p>
+     <p>$1700</p>
+     <p>$1700</p>
+     <p>$1700</p>
+</div> -->
+
+<div class="content">
+
+    <div class="table-container">
+        <table id="tablep" class="adicionales"></table></div>
+
+</div>
+
+                <script src="mainn.js"></script>
+</body>
+
+</html>
