@@ -115,9 +115,11 @@ const cabeceras = [
   "Precio",
   "% Aumento",
   "$ con aumento",
+  "$ diferencia",
   "% descuento",
   "$ actual con descuento",
   "$ nuevo con descuento",
+  "$ diferencia",
 ];
 
 let localidad = document.querySelector("#localidad");
@@ -137,13 +139,17 @@ const carga = (lista) => {
          <input type="number" id="porcentaje${item.titulo}" name="porcentaje" min="0" max="100" value="0">
          <label for="porcentaje">%</label>
     </td>
-     <td>${item.precio}</td>
+
+    <td>${item.precio}</td>
+     <td>$0</td>
      <td>
      <input type="number" id="descuento${item.titulo}" name="descuento" min="0" max="100" value="0">
      <label for="descuento">%</label>
       </td>
      <td>${item.precio}</p>
-     <td>${item.precio}</td>`;
+     <td>${item.precio}</td>
+     <td>$0</td>
+     `;
     tablep.appendChild(tableR);
   });
 };
@@ -185,16 +191,20 @@ const actualizar = (fila) => {
   //variables
   let precio = fila.children[1].children[1].valueAsNumber;
   let aumento = fila.children[2].children[0].valueAsNumber;
-  let descuento = fila.children[4].children[0].valueAsNumber;
+  let descuento = fila.children[5].children[0].valueAsNumber;
   console.log(precio, aumento, descuento);
   //cells 1,2,4 variables
   //cells 1 children 1 value
   let precioAum= precio*(aumento+100)/100
   let actualDes=precio*(100-descuento)/100
   let nuevoDes=precioAum*(100-descuento)/100
+  let diferencia=precioAum-precio
+  let Descdiferencia=nuevoDes-actualDes
 
   // resultados 3,5,6 innerText
   fila.children[3].innerText=precioAum;
-  fila.children[5].innerText=actualDes;
-  fila.children[6].innerText=nuevoDes;
+  fila.children[4].innerText=diferencia;
+  fila.children[6].innerText=actualDes;
+  fila.children[7].innerText=nuevoDes;
+  fila.children[8].innerText= '$'+parseFloat(Descdiferencia).toFixed(2);
 };
