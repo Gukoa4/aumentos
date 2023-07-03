@@ -2,66 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="test.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>Precios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplificado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="selectores">
-        <div>
-            <label for="localidad">Seleccione la localidad:&nbsp;</label>
-            <select id="localidad" autocomplete="off">
-                <option value="listaSalvador" selected>San Salvador</option>
-                <option value="listaPalpala">Palpala</option>
-            </select>
-        </div>
-        <div>
-            <label for="lista">Seleccione la lista de precios:&nbsp;</label>
-            <select id="lista" autocomplete="off">
-                <option value="listaJun2023" selected>Junio 2023</option>
-            </select>
-        </div>
-    </div>
-    <div class="content">
-        <div class="container-precios">
-            <div class="por3">
-                <header>
-                    <h2>Aumentos</h2>
-                </header>
-                <!-- <div class="wrapper">
-    <span>Producto</span> <span>Precio</span> <span>Aumento</span> <span>Precio con aumento</span> <span>descuento</span> <span>precio actual con descuento</span><span>precio nuevo con descuento</span>
-</div>
-<div class="wrapper">
-    <p>Tv</p> 
-    <div>
-        <label for="fname">$</label>
-            <input type="text" id="fname" name="fname">
-    </div>
-     <div>
-         <input type="text" id="fname" name="fname">
-         <label for="fname">%</label>
-    </div>
-     <p>$1700</p>
-     <p>$1700</p>
-     <p>$1700</p>
-     <p>$1700</p>
-</div> -->
+    <main>
+        <header>
+            <h1>Simplificado</h1>
+            <form>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Precio Actual</span>
+                    <input type="number" class="form-control" placeholder="$1589" aria-label="actual"
+                        aria-describedby="addon-wrapping" id="precio">
+                </div>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Aumento %</span>
+                    <input type="number" class="form-control" placeholder="0%" aria-label="Aumento"
+                        aria-describedby="addon-wrapping" id="aumento" min=0 max=100>
+                </div>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Descuento %</span>
+                    <input type="number" class="form-control" placeholder="23%" aria-label="Descuento"
+                        aria-describedby="addon-wrapping" id="descuento" min=0 max=100>
 
-<div class="content">
+                </div>
+                </div>
+            </form>
+            <table class="table table-hover ">
+                <thead>
+                    <th></th>
+                    <th scope="col">Antes</th>
+                    <th scope="col">Ahora</th>
+                    <th scope="col">Diferencia</th>
+                </thead>
+                <tbody id="tablebody" class="table-hover">
+                    <tr>
+                        <td scope="row" id="tdLista">Lista</td>
+                    </tr>
+                    <tr scope="row">
+                        <td>Descuento 20%</td>
 
-    <div class="table-container">
-        <table id="tablep" class="adicionales"></table></div>
+                    </tr>
+                    <tr scope="row">
+                        <td>Descuento 30%</td>
 
-</div>
+                    </tr>
+                    <tr scope="row">
+                        <td>Descuento 40%</td>
 
-                <script src="mainn.js"></script>
+                    </tr>
+                    <tr scope="row">
+                        <td>Descuento 23%</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </header>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
