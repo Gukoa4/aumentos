@@ -4,6 +4,7 @@ document.addEventListener("change", (e) => {
     }
 });
 
+
 const actualizar = () => {
     let valorPrecio, valorAumento, valorDescuento;
     console.log(
