@@ -1,0 +1,18 @@
+.editor{
+    background-color: #3b3939 ;
+    /* outline: red 1px solid; */
+    padding: 1px;
+}
+.tabla{
+    background-color: #1f1f23 ;
+}
+.selector{
+    background-color: #375a7f ;
+}
+
+.form-floating-label-disabled-color {
+    color:#333;
+}
+.grey{
+    color:rgb(63, 62, 62) !important;
+}
